@@ -2,15 +2,20 @@
 
 int main() {
     char str[100];
-    int i;
-    
+    int i, len = 0;
+
     printf("Enter a string: ");
     scanf("%s", str);
-    
-    printf("Characters are:\n");
-    for(i = 0; str[i] != '\0'; i++) {
-        printf("%c\n", str[i]);
+
+    // length find
+    while(str[len] != '\0') {
+        len++;
     }
-    
+
+    printf("Reversed string:\n");
+    for(i = len - 1; i >= 0; i--) {
+        printf("%c", str[i]);
+    }
+
     return 0;
 }
